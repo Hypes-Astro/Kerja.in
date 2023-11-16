@@ -1,11 +1,13 @@
 
 import './App.css'
+import MainPage from './page/MainPage'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
 
   return (
     <>
-      <button className="btn btn-primary">Tes aja</button>
+      <MainPage/>
     </>
   )
 }

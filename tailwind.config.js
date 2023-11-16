@@ -13,6 +13,7 @@ export default {
     themes: [
       "lofi",
     ],
+
   },
   
   // eslint-disable-next-line no-undef
