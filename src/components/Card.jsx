@@ -1,17 +1,26 @@
+/* eslint-disable react/prop-types */
 
-const Card = ({logicDone}) =>{
+const Card = ({judul,logicDone,body,hapus,todo,archive}) =>{
+    
+    const onDeleteClick = () => hapus(todo.id);
+    const onArchiveClick = () => archive(todo.id)
+
+    // console.log(hapus(todo.id) + "ini di card")
     return(
         <div className="CardAction">
             <div className={`card w-full bg-base-100 shadow-xl ${logicDone ? "bg-slate-400 text-white" : "bg-white text-black"}`}>
                 <div className="card-body ">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose? If a dog chews shoes whose shoes does he choose? </p>
+                    <h2 className="card-title"> {judul} </h2>
+                    <p>{body}</p>
                     <div className="card-actions ">
-                        <button className="btn btn-primary">Selesai</button>
-                        <button className="btn ">Hapus</button>
+                        <button className="btn btn-primary" onClick={onArchiveClick}>Selesai</button>
+                        <button className="btn " onClick={onDeleteClick}>Hapus</button>
                     </div>
                 </div>
             </div>
+            {
+                // console.table(todo)
+            }
         </div>
     );
 }
