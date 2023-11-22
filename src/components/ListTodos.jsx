@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import Card from "./Card";
 
-
-
 const ListTodos = ({todos,hapus,archive}) => {
     const undoneTodos = todos.filter(todo => !todo.archived);
     const doneTodos = todos.filter(todo => todo.archived);

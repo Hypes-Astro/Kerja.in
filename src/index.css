@@ -17,3 +17,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page-loaded {
+  opacity: 1;
+}
