@@ -70,9 +70,10 @@ const Form = ({addNewTodo}) => {
                 title: formData.title,
                 body: formData.todoBody,
                 archived: false, 
-                createdAt: new Date(),
+                createdAt: new Date().toISOString(),
             }
             const result = addNewTodo(newData);
+        
         
             if (!result) {
                 toast.success('New note saved!');

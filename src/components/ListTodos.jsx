@@ -6,6 +6,10 @@ const ListTodos = ({todos,hapus,archive}) => {
     const doneTodos = todos.filter(todo => todo.archived);
     var done = true;
     var undone = false;
+
+    // todos.map(index =>(
+    //     console.table(index.createdAt)
+    // ))
     return(
         <div className="w-full h-full">
             {/* undone */}
@@ -18,10 +22,13 @@ const ListTodos = ({todos,hapus,archive}) => {
                 {
                 undoneTodos.length !== 0 ? (
                         undoneTodos.map(item => (
+                            
+                            
                             <Card
                                 key={item.id}
                                 todo={item}
                                 judul={item.title}
+                                createAt={item.createdAt}
                                 body={item.body}
                                 hapus={hapus}
                                 archive={archive}
@@ -47,6 +54,7 @@ const ListTodos = ({todos,hapus,archive}) => {
                                 key={item.id}
                                 todo={item}
                                 judul={item.title}
+                                createAt={item.createdAt}
                                 body={item.body}
                                 hapus={hapus}
                                 archive={archive}

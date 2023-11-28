@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 
-const Card = ({judul,logicDone,body,hapus,todo,archive}) =>{
+import { showFormattedDate } from "../utils";
+
+const Card = ({judul,logicDone,body,createAt,hapus,todo,archive}) =>{
     
     const onDeleteClick = () => hapus(todo.id);
     const onArchiveClick = () => archive(todo.id)
@@ -11,6 +13,7 @@ const Card = ({judul,logicDone,body,hapus,todo,archive}) =>{
             <div className={`card w-full bg-base-100 shadow-xl ${logicDone ? "bg-slate-400 text-white" : "bg-white text-black"}`}>
                 <div className="card-body ">
                     <h2 className="card-title"> {judul} </h2>
+                    <p className="font-bold"> {showFormattedDate(createAt)} </p>
                     <p className="h-auto">{body}</p>
                     <div className="card-actions ">
                         {
