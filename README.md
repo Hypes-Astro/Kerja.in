@@ -1,4 +1,4 @@
-# Preview project : kerjain.vercel.app
+# Preview project : https://kerjain.vercel.app/
 
 # BUILD with React + Vite + tailwind
 
